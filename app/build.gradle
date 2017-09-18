@@ -45,4 +45,5 @@ dependencies {
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
     compile 'io.reactivex:rxandroid:1.2.1'
 
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
 }
