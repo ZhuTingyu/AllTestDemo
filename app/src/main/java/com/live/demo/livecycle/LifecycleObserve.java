@@ -17,6 +17,7 @@ public class LifecycleObserve implements LifecycleObserver{
         Log.e("onAny:" , event.name());
     }
 
+
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     void onCreate() {
 
