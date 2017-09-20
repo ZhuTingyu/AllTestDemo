@@ -1,6 +1,5 @@
 package com.live.demo.ui;
 
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import com.live.demo.livedata.LocationLiveData;
 import com.live.demo.R;
 import com.live.demo.viewmodel.StringListViewModel;
 
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
