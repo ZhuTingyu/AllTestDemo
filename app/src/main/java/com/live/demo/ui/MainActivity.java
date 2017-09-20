@@ -31,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
 
         viewModel = ViewModelProviders.of(this).get(StringListViewModel.class);
+
+        initView();
+
         viewModel.getLiveData().observe(this, locationEntities -> {
             adapter.setNewData(locationEntities);
         });
@@ -44,12 +46,13 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         recyclerView = findViewById(R.id.list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MainListAdapter();
+        adapter = new MainListAdapter(viewModel);
         recyclerView.setAdapter(adapter);
         locationLiveData = new LocationLiveData();
 
         findViewById(R.id.btn).setOnClickListener(view -> {
             viewModel.dateAdd();
+            recyclerView.scrollToPosition(viewModel.getLiveData().getValue().size() - 1);
         });
     }
 }

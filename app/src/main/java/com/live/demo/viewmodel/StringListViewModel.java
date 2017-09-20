@@ -15,10 +15,10 @@ import java.util.List;
 
 public class StringListViewModel extends ViewModel{
 
-    private  MutableLiveData<List<String>> liveData;
-    List<String> data;
+    public   MutableLiveData<List<Integer>> liveData;
+    List<Integer> data;
 
-    public LiveData<List<String>> getLiveData(){
+    public LiveData<List<Integer>> getLiveData(){
         if(liveData == null){
             liveData = new MutableLiveData();
             loadData();
@@ -29,13 +29,13 @@ public class StringListViewModel extends ViewModel{
     private void loadData() {
         data = new ArrayList<>();
         for(int i = 0; i < 7; i++){
-            data.add(i+"");
+            data.add(i);
         }
         liveData.setValue(data);
     }
 
     public void dateAdd(){
-        data.add("32");
+        data.add(1);
         liveData.setValue(data);
     }
 }
