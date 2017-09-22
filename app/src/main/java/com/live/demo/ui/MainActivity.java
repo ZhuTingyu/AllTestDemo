@@ -12,6 +12,8 @@ import com.live.demo.livedata.LocationLiveData;
 import com.live.demo.R;
 import com.live.demo.viewmodel.StringListViewModel;
 
+import org.andengine.AndEngine;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         viewModel = ViewModelProviders.of(this).get(StringListViewModel.class);
 
         initView();
+
+
 
         viewModel.getLiveData().observe(this, locationEntities -> {
             adapter.setNewData(locationEntities);

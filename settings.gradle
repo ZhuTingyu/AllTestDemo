@@ -1,1 +1,2 @@
-include ':app', ':AndEngine'
+include ':app'
+include ':andEngine'
