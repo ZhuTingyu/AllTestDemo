@@ -12,7 +12,6 @@ import com.live.demo.livedata.LocationLiveData;
 import com.live.demo.R;
 import com.live.demo.viewmodel.StringListViewModel;
 
-import org.andengine.AndEngine;
 
 
 public class MainActivity extends AppCompatActivity {
