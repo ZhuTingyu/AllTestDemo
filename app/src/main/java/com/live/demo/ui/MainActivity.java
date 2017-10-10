@@ -1,6 +1,8 @@
 package com.live.demo.ui;
 
 import android.arch.lifecycle.ViewModelProviders;
+import android.arch.lifecycle.ViewModelStore;
+import android.arch.lifecycle.ViewModelStores;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +18,6 @@ import com.live.demo.viewmodel.StringListViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LocationLiveData locationLiveData;
     private RecyclerView recyclerView;
     private MainListAdapter adapter;
     private StringListViewModel viewModel;
@@ -35,15 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel = ViewModelProviders.of(this).get(StringListViewModel.class);
 
-        initView();
-
-
-
         viewModel.getLiveData().observe(this, locationEntities -> {
             adapter.setNewData(locationEntities);
         });
 
-
+        initView();
 
     }
 
@@ -53,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MainListAdapter(viewModel);
         recyclerView.setAdapter(adapter);
-        locationLiveData = new LocationLiveData();
 
         findViewById(R.id.btn).setOnClickListener(view -> {
             viewModel.dateAdd();
