@@ -1,2 +1,0 @@
-com.alibaba.sdk.android.oss_android_sdk.test
-int string app_name 0x7f010000
