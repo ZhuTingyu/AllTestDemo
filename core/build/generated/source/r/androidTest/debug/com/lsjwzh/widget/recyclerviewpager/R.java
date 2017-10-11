@@ -8,35 +8,40 @@ package com.lsjwzh.widget.recyclerviewpager;
 
 public final class R {
     public static final class attr {
-        public static final int layoutManager = 0x7f0300ab;
-        public static final int reverseLayout = 0x7f03011b;
-        public static final int rvp_flingFactor = 0x7f030127;
-        public static final int rvp_singlePageFling = 0x7f030128;
-        public static final int rvp_triggerOffset = 0x7f030129;
-        public static final int spanCount = 0x7f03013f;
-        public static final int stackFromEnd = 0x7f030145;
+        public static final int layoutManager = 0x7f0300c4;
+        public static final int reverseLayout = 0x7f030135;
+        public static final int rvp_flingFactor = 0x7f030141;
+        public static final int rvp_singlePageFling = 0x7f030142;
+        public static final int rvp_triggerOffset = 0x7f030143;
+        public static final int spanCount = 0x7f030159;
+        public static final int stackFromEnd = 0x7f03015f;
     }
     public static final class dimen {
-        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f060086;
-        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f060087;
-        public static final int item_touch_helper_swipe_escape_velocity = 0x7f060088;
+        public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f06008e;
+        public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f06008f;
+        public static final int item_touch_helper_swipe_escape_velocity = 0x7f060090;
     }
     public static final class id {
-        public static final int item_touch_helper_previous_elevation = 0x7f08005c;
-        public static final int rvp_fragment_container = 0x7f08008b;
+        public static final int item_touch_helper_previous_elevation = 0x7f080067;
+        public static final int rvp_fragment_container = 0x7f080098;
     }
     public static final class layout {
         public static final int rvp_fragment_container = 0x7f0a0048;
     }
     public static final class styleable {
-        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f0300ab, 0x7f03011b, 0x7f03013f, 0x7f030145 };
+        public static final int[] RecyclerView = { 0x010100c4, 0x010100f1, 0x7f030097, 0x7f030098, 0x7f030099, 0x7f03009a, 0x7f03009b, 0x7f0300c4, 0x7f030135, 0x7f030159, 0x7f03015f };
         public static final int RecyclerView_android_orientation = 0;
         public static final int RecyclerView_android_descendantFocusability = 1;
-        public static final int RecyclerView_layoutManager = 2;
-        public static final int RecyclerView_reverseLayout = 3;
-        public static final int RecyclerView_spanCount = 4;
-        public static final int RecyclerView_stackFromEnd = 5;
-        public static final int[] RecyclerViewPager = { 0x7f030127, 0x7f030128, 0x7f030129 };
+        public static final int RecyclerView_fastScrollEnabled = 2;
+        public static final int RecyclerView_fastScrollHorizontalThumbDrawable = 3;
+        public static final int RecyclerView_fastScrollHorizontalTrackDrawable = 4;
+        public static final int RecyclerView_fastScrollVerticalThumbDrawable = 5;
+        public static final int RecyclerView_fastScrollVerticalTrackDrawable = 6;
+        public static final int RecyclerView_layoutManager = 7;
+        public static final int RecyclerView_reverseLayout = 8;
+        public static final int RecyclerView_spanCount = 9;
+        public static final int RecyclerView_stackFromEnd = 10;
+        public static final int[] RecyclerViewPager = { 0x7f030141, 0x7f030142, 0x7f030143 };
         public static final int RecyclerViewPager_rvp_flingFactor = 0;
         public static final int RecyclerViewPager_rvp_singlePageFling = 1;
         public static final int RecyclerViewPager_rvp_triggerOffset = 2;

@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/core/core1.iml" filepath="$PROJECT_DIR$/core/core1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
       <module fileurl="file://$PROJECT_DIR$/liveDataDome.iml" filepath="$PROJECT_DIR$/liveDataDome.iml" />
-      <module fileurl="file://$PROJECT_DIR$/opencv-android/opencv-android1.iml" filepath="$PROJECT_DIR$/opencv-android/opencv-android1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/oss-android-sdk/oss-android-sdk1.iml" filepath="$PROJECT_DIR$/oss-android-sdk/oss-android-sdk1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/opencv-android/opencv-android.iml" filepath="$PROJECT_DIR$/opencv-android/opencv-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oss-android-sdk/oss-android-sdk.iml" filepath="$PROJECT_DIR$/oss-android-sdk/oss-android-sdk.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.biz.base;
 
 
+import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 
@@ -18,13 +19,17 @@ import rx.subscriptions.CompositeSubscription;
 /**
  * Created by wangwei on 2016/3/15.
  */
-public class BaseViewModel {
+public class BaseViewModel<T> {
+
+    protected MutableLiveData<T> data;
+
     private Object baseActivity;
     protected final CompositeSubscription subscription = new CompositeSubscription();
     protected final BehaviorSubject<RestErrorInfo> error = BehaviorSubject.create();
 
     public BaseViewModel(Object activity) {
         this.baseActivity = activity;
+        data = new MutableLiveData<>();
     }
 
     public BaseActivity getActivity() {

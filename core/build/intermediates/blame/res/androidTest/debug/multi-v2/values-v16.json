@@ -4,13 +4,32 @@
             "outputFile": "F:\\Projiect\\learn_project\\liveDataDome\\core\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\TingYu Zhu\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.4.0.aar\\4031ed36a5c9a8ce646bf827525f4cff\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\TingYu Zhu\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\3f1884df7943a4decd8ffe95a5d85d56\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
                         "endColumns": "65",
                         "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\TingYu Zhu\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\36ad338cab805df75a5a8d976ee21455\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
                     }
                 }
             ]

@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="15"
-        android:targetSdkVersion="25" />
+        android:targetSdkVersion="26" />
 
     <!-- 阿里云数据分析添加 -->
     <uses-permission android:name="android.permission.INTERNET" />

@@ -17,7 +17,7 @@ import java.util.List;
  * Created by TingYu Zhu on 2017/9/18.
  */
 
-public class MainListAdapter extends BaseQuickAdapter<Integer, BaseViewHolder> {
+public class MainListAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
     private StringListViewModel viewModel;
 
@@ -27,14 +27,14 @@ public class MainListAdapter extends BaseQuickAdapter<Integer, BaseViewHolder> {
     }
 
     @Override
-    protected void convert(BaseViewHolder holder, Integer item) {
+    protected void convert(BaseViewHolder holder, String item) {
         TextSwitcher textSwitcher = holder.getView(R.id.text_switcher);
         textSwitcher.setCurrentText(String.valueOf(item));
 
         holder.itemView.setOnClickListener(view -> {
-            int itemDate = mData.get(holder.getAdapterPosition());
+            int itemDate = Integer.parseInt(mData.get(holder.getAdapterPosition()));
             itemDate += 1;
-            mData.set(holder.getAdapterPosition(), itemDate);
+            mData.set(holder.getAdapterPosition(), String.valueOf(itemDate));
             TextSwitcher switcher = view.findViewById(R.id.text_switcher);
             switcher.setText(String.valueOf(itemDate));
         });

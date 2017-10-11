@@ -5,6 +5,7 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
 
+import com.biz.base.BaseViewModel;
 import com.live.demo.livedata.LocationLiveData;
 
 import java.util.ArrayList;
@@ -14,18 +15,38 @@ import java.util.List;
  * Created by TingYu Zhu on 2017/9/19.
  */
 
-public class StringListViewModel extends ViewModel{
+public class StringListViewModel extends BaseViewModel{
 
     public  MutableLiveData<List<String>> liveData;
     List<String> data;
-    /*MutableLiveData<List<String>> dataString = Transformations.switchMap(liveData, input -> {
+    public LiveData<List<String>> mapLiveData = Transformations.switchMap(liveData, input -> {
+        MutableLiveData<List<String>> temp = new MutableLiveData<>();
+        ArrayList<String> strings = new ArrayList<>();
+        for(String s : input){
+                strings.add(s + ":"+ s);
+        }
+        temp.setValue(strings);
+        return temp;
+    });
 
-    });*/
+    public StringListViewModel(Object activity) {
+        super(activity);
+    }
 
     public LiveData<List<String>> getLiveData(){
         if(liveData == null){
             liveData = new MutableLiveData();
             loadData();
+
+        }
+        return liveData;
+    }
+
+    public LiveData<List<String>> getStingLiveData(){
+        if(liveData == null){
+            liveData = new MutableLiveData();
+            loadData();
+
         }
         return liveData;
     }
@@ -35,7 +56,6 @@ public class StringListViewModel extends ViewModel{
         for(int i = 0; i < 7; i++){
             data.add(String.valueOf(i));
         }
-        liveData.setValue(data);
     }
 
     public void dateAdd(){
