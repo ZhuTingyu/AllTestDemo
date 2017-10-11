@@ -2,6 +2,7 @@ package com.live.demo.viewmodel;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
 
 import com.live.demo.livedata.LocationLiveData;
@@ -15,10 +16,13 @@ import java.util.List;
 
 public class StringListViewModel extends ViewModel{
 
-    public   MutableLiveData<List<Integer>> liveData;
-    List<Integer> data;
+    public  MutableLiveData<List<String>> liveData;
+    List<String> data;
+    /*MutableLiveData<List<String>> dataString = Transformations.switchMap(liveData, input -> {
 
-    public LiveData<List<Integer>> getLiveData(){
+    });*/
+
+    public LiveData<List<String>> getLiveData(){
         if(liveData == null){
             liveData = new MutableLiveData();
             loadData();
@@ -29,13 +33,13 @@ public class StringListViewModel extends ViewModel{
     private void loadData() {
         data = new ArrayList<>();
         for(int i = 0; i < 7; i++){
-            data.add(i);
+            data.add(String.valueOf(i));
         }
         liveData.setValue(data);
     }
 
     public void dateAdd(){
-        data.add(1);
+        data.add(String.valueOf(1));
         liveData.setValue(data);
     }
 }

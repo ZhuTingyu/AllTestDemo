@@ -1,2 +1,4 @@
-include ':app'
-include ':andEngine'
+include ':app', ':opencv-android1', ':oss-android-sdk1', ':core1'
+project(':opencv-android1').projectDir = new File('opencv-android')
+project(':oss-android-sdk1').projectDir = new File('oss-android-sdk')
+project(':core1').projectDir = new File('core')

@@ -18,12 +18,17 @@ public class LocationLiveData extends MutableLiveData<ArrayList<String>> {
     public LocationLiveData() {
     }
 
+    /**
+     * LiveData的观察者数量从0到1
+     */
     @Override
     protected void onActive() {
         super.onActive();
 
     }
-
+    /**
+     * LiveData的观察者数量变为0
+     */
     @Override
     protected void onInactive() {
         super.onInactive();

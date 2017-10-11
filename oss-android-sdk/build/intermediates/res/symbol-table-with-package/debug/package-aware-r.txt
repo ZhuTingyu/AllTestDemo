@@ -1,0 +1,2 @@
+com.alibaba.sdk.android.oss_android_sdk
+int string app_name 0x7f150001

@@ -1,8 +1,7 @@
 package com.live.demo.ui;
 
+import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModelProviders;
-import android.arch.lifecycle.ViewModelStore;
-import android.arch.lifecycle.ViewModelStores;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,10 +9,8 @@ import android.support.v7.widget.RecyclerView;
 
 import com.live.demo.adapter.MainListAdapter;
 import com.live.demo.livecycle.LifecycleObserve;
-import com.live.demo.livedata.LocationLiveData;
 import com.live.demo.R;
 import com.live.demo.viewmodel.StringListViewModel;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         viewModel = ViewModelProviders.of(this).get(StringListViewModel.class);
 
-        viewModel.getLiveData().observe(this, locationEntities -> {
-            adapter.setNewData(locationEntities);
+        viewModel.getLiveData().observe(this, integers -> {
+            adapter.setNewData(integers);
         });
 
         initView();
