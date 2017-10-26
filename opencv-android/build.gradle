@@ -24,6 +24,7 @@ android {
         release.setRoot('build-types/release')
         play.setRoot('build-types/play')
     }
+    buildToolsVersion '26.0.2'
 }
 
 afterEvaluate { project ->
