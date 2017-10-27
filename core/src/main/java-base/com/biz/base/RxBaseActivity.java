@@ -25,11 +25,12 @@ public abstract class RxBaseActivity extends AppCompatActivity {
         this.viewModel = viewModel;
         if (this.viewModel != null) {
             bindData(viewModel.getError(), error -> {
+                RestErrorInfo info = (RestErrorInfo) error;
                 if (error!=null) {
                     if (viewModel != null) {
                         viewModel.clearError();
                     }
-                    error(error.code,error.message);
+                    error(info.code,info.message);
                 }
             });
         }
