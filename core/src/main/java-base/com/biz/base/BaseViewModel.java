@@ -2,6 +2,7 @@ package com.biz.base;
 
 
 import android.arch.lifecycle.MutableLiveData;
+import android.arch.lifecycle.ViewModel;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 
@@ -19,7 +20,7 @@ import rx.subscriptions.CompositeSubscription;
 /**
  * Created by wangwei on 2016/3/15.
  */
-public class BaseViewModel<T> {
+public class BaseViewModel<T> extends ViewModel{
 
     protected MutableLiveData<T> data;
 
