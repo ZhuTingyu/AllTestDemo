@@ -1,4 +1,4 @@
-/*
+
 package com.live.demo.adapter;
 
 import android.support.annotation.Nullable;
@@ -7,6 +7,7 @@ import android.widget.TextSwitcher;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.live.demo.R;
+import com.live.demo.viewmodel.StringListViewModel;
 //import com.live.demo.viewmodel.StringListViewModel;
 
 import org.w3c.dom.Entity;
@@ -14,21 +15,21 @@ import org.w3c.dom.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
-*/
+
 /**
  * Created by TingYu Zhu on 2017/9/18.
- *//*
+ */
 
 
 public class MainListAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
 
-    //private StringListViewModel viewModel;
+    private StringListViewModel viewModel;
 
-    */
-/*public MainListAdapter(StringListViewModel viewModel) {
+
+public MainListAdapter(StringListViewModel viewModel) {
         super(R.layout.item_line_text_layout, new ArrayList<>());
         this.viewModel = viewModel;
-    }*//*
+    }
 
 
     @Override
@@ -45,4 +46,4 @@ public class MainListAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
         });
     }
 }
-*/
+

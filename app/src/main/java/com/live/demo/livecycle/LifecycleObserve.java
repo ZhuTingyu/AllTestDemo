@@ -1,4 +1,3 @@
-/*
 package com.live.demo.livecycle;
 
 import android.arch.lifecycle.Lifecycle;
@@ -7,10 +6,8 @@ import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.OnLifecycleEvent;
 import android.util.Log;
 
-*/
-/**
- * Created by TingYu Zhu on 2017/9/15.
- *//*
+
+
 
 
 public class LifecycleObserve implements LifecycleObserver{
@@ -32,4 +29,3 @@ public class LifecycleObserve implements LifecycleObserver{
     }
 
 }
-*/

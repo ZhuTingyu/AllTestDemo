@@ -1,4 +1,4 @@
-/*
+
 package com.live.demo.viewmodel;
 
 import android.arch.lifecycle.LiveData;
@@ -12,10 +12,10 @@ import com.live.demo.livedata.LocationLiveData;
 import java.util.ArrayList;
 import java.util.List;
 
-*/
+
 /**
  * Created by TingYu Zhu on 2017/9/19.
- *//*
+ */
 
 
 public class StringListViewModel extends ViewModel{
@@ -63,4 +63,4 @@ public class StringListViewModel extends ViewModel{
         liveData.setValue(data);
     }
 }
-*/
+
