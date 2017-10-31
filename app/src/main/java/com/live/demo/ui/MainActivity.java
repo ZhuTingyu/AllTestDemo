@@ -8,11 +8,10 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.biz.util.LogUtil;
 import com.live.demo.adapter.MainListAdapter;
 import com.live.demo.livecycle.LifecycleObserve;
 import com.live.demo.R;
-import com.live.demo.util.ScheduledExecutorServiceUtil;
+import com.live.demo.util.TimerManager;
 import com.live.demo.viewmodel.StringListViewModel;
 
 
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private MainListAdapter adapter;
     private StringListViewModel viewModel;
     private Handler handler = new Handler(new Handler.Callback() {
+
         @Override
         public boolean handleMessage(Message msg) {
 
@@ -50,10 +50,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         initView();
-
-        ScheduledExecutorServiceUtil.rotatingTraining(() -> {
-            handler.sendEmptyMessage(0);
-        });
     }
 
 
