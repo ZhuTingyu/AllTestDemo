@@ -8,7 +8,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.live.demo.R;
 import com.live.demo.viewmodel.StringListViewModel;
-//import com.live.demo.viewmodel.StringListViewModel;
+import com.live.demo.viewmodel.StringListViewModel;
 
 import org.w3c.dom.Entity;
 
