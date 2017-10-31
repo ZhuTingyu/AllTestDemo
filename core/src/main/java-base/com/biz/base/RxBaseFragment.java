@@ -28,7 +28,7 @@ public abstract class RxBaseFragment extends Fragment {
                     if (viewModel != null) {
                         viewModel.clearError();
                     }
-                    error(error.code,error.message);
+                    //error(error.code,error.message);
                 }
             });
         }

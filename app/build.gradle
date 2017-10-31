@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 
 
 android {
@@ -12,6 +11,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }}
+
     }
     buildTypes {
         release {
@@ -24,10 +29,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 
 }
 
@@ -38,4 +39,8 @@ dependencies {
         implementation project(':opencv-android')
         implementation project(':oss-android-sdk')*/
     implementation project(':core')
+
+    /*compile 'android.arch.lifecycle:runtime:1.0.0-alpha9-1'
+    compile 'android.arch.lifecycle:extensions:1.0.0-alpha9-1'
+    compile "android.arch.lifecycle:compiler:1.0.0-alpha9-1"*/
 }

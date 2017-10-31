@@ -53,9 +53,6 @@ dependencies {
     compile project(':oss-android-sdk')
     compile 'com.umeng.analytics:analytics:6.1.1'
 
-    compile 'android.arch.lifecycle:runtime:1.0.0-alpha9-1'
-    compile 'android.arch.lifecycle:extensions:1.0.0-alpha9-1'
-    compile "android.arch.lifecycle:compiler:1.0.0-alpha9-1"
 }
 
 
@@ -92,6 +89,7 @@ android {
         resValue("string", "weixin_appid", "")
         resValue("string", "weixin_appsecret", "")
         resValue("string", "dialog_not_pay_weixin", "当前微信版本不支持支付功能，请下载最新版本。")
+
 
 
     }
