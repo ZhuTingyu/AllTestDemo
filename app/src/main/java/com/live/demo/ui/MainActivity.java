@@ -8,11 +8,14 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.biz.util.IntentBuilder;
 import com.live.demo.adapter.MainListAdapter;
 import com.live.demo.livecycle.LifecycleObserve;
 import com.live.demo.R;
 import com.live.demo.util.TimerManager;
 import com.live.demo.viewmodel.StringListViewModel;
+
+import cn.jzvd.JZVideoPlayer;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -60,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         findViewById(R.id.btn).setOnClickListener(view -> {
-            viewModel.dateAdd();
-            recyclerView.scrollToPosition(viewModel.getLiveData().getValue().size() - 1);
+            /*viewModel.dateAdd();
+            recyclerView.scrollToPosition(viewModel.getLiveData().getValue().size() - 1);*/
+            IntentBuilder.Builder(MainActivity.this, VideoActivity.class).startActivity();
         });
     }
 }
