@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <cn.jzvd.JZVideoPlayerStandard
+    <!--<cn.jzvd.JZVideoPlayerStandard
         android:id="@+id/videoplayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="20FrameLayout0dp"
+        android:layout_marginBottom="16dp"/>-->
 
-</LinearLayout>
+
+    <!--<FrameLayout
+        android:id="@+id/fl"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp" />
+
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/play"
+        android:text="播放"
+        android:layout_below="@id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />-->
+
+    <!--<com.mcoy_jiang.videomanager.ui.McoyVideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />-->
+
+</RelativeLayout>

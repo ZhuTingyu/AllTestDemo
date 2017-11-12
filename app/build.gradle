@@ -46,4 +46,5 @@ dependencies {
     compile project(':core')
     compile 'cn.jzvd:jiaozivideoplayer:6.1.2'
 
+    compile 'com.github.tcking:giraffeplayer2:0.1.9'
 }
