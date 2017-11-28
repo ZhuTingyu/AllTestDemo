@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.biz.util.IntentBuilder;
 import com.live.demo.adapter.MainListAdapter;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MainListAdapter adapter;
     private StringListViewModel viewModel;
+    private Toolbar toolbar;
+
     private Handler handler = new Handler(new Handler.Callback() {
 
         @Override
@@ -57,15 +60,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initView() {
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("主页");
+
         recyclerView = findViewById(R.id.list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter = new MainListAdapter(viewModel);
         recyclerView.setAdapter(adapter);
 
         findViewById(R.id.btn).setOnClickListener(view -> {
-            /*viewModel.dateAdd();
-            recyclerView.scrollToPosition(viewModel.getLiveData().getValue().size() - 1);*/
-            IntentBuilder.Builder(MainActivity.this, VideoActivity.class).startActivity();
+            viewModel.dateAdd();
+            recyclerView.scrollToPosition(viewModel.getLiveData().getValue().size() - 1);
+           // IntentBuilder.Builder(MainActivity.this, VideoActivity.class).startActivity();
         });
     }
 }
